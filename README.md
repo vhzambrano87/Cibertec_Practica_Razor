@@ -18,3 +18,4 @@ En la presente se deberan de abordar los tópicos cubiertos en las sesiones de r
 6. Crea HTML helpers para facilitar el reuso de código. **(1 punto por helper)**
 7. Crea 1 o más páginas con Razor sin uso de scaffolding. **(2 puntos)**
 8. Personaliza el enrutamiento de 1 controlador y cada una de sus acciones **(1 punto adicional por cada controlador)**
+9. Realizar el mapeo de 3 clases usando Automapper, será necesario crear su ModelView correspondiente para poderlo considerar como un ejercicio valido. **(3 puntos)**
