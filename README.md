@@ -10,8 +10,8 @@ En la presente se deberan de abordar los tópicos cubiertos en las sesiones de r
 2. Crear los controladores necesarios cons sus respectivas acciones para la administración de los modelos. **(4 puntos)**
    - Crear un controlador por clase de modelo.
    - Realizar el uso adecuado de las notaciones al crear las acciones
-3. Generar las vistas necesarias de acuerdo a las acciones creadas en los respectivos controladores. **(4 puntos)**
-   - Relizar la generación de las vistas de los modelos, acorde a lo aprendido en clases.
+3. Generar las vistas necesarias de acuerdo a las acciones creadas en los respectivos controladores. **(4)**
+   - Realizar la generación de las vistas de los modelos, acorde a lo aprendido en clases.
 4. Modifica el Layout y agrega las opciones de menu necesarias para acceder a los controladores y acciones creadas **(2 puntos)**
    - Realiza la edición del código HTML del layout para agregar la(s) opción(es) necesarias, para facilitar la navegabilidad.
 5. Crea un ActionFilter para realizar el logueo de información cuando la acción esta en ejecución. **(1 punto)** **(4 puntos si aplica un framework de log)**
