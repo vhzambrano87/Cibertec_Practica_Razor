@@ -20,3 +20,5 @@ En la presente se deberan de abordar los tópicos cubiertos en las sesiones de r
 8. Personaliza el enrutamiento de 1 controlador y cada una de sus acciones **(1 punto adicional por cada controlador)**
 9. Realizar el mapeo de 3 clases usando Automapper, será necesario crear su ModelView correspondiente para poderlo considerar como un ejercicio valido. **(3 puntos)**
 10. CleanCode y S.O.L.I.D.  **(4 puntos)**
+
+# Fecha y hora máxima de entrega: 4 de Julio 1:00 pm
