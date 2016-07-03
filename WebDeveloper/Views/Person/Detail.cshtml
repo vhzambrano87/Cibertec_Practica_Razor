@@ -1,0 +1,83 @@
+﻿@model WebDeveloper.Model.DTO.PersonModelView
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <nav class="navbar-left">
+            <ul class="navbar-nav navbar-left">
+                <br />
+                <li class = "btn btn-default col-md-12">
+                    <a href="~/EmailAddress/Index/@Model.BusinessEntityID">
+                    Email
+                    </a>
+                </li>
+                <br />
+                <li class = "btn btn-default col-md-12">
+                    <a href="~/Password/Index/@Model.BusinessEntityID">
+                        Password
+                    </a>
+                </li>
+                <br />
+                <li class = "btn btn-default col-md-12">
+                    <a href="~/PersonPhone/Index/@Model.BusinessEntityID">
+                        Phone Number
+                    </a>                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-md-9">
+        <h4>Person</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BusinessEntityID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BusinessEntityID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MiddleName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedDate)
+            </dd>
+
+        </dl>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using WebDeveloper.Model;
 
 namespace WebDeveloper.DataAccess
 {
@@ -6,22 +9,37 @@ namespace WebDeveloper.DataAccess
     {
         public int Add(T entity)
         {
-            return 0;
+            using (var dbContext = new WebContextDB())
+            {
+                dbContext.Entry(entity).State = EntityState.Added;
+                return dbContext.SaveChanges();
+            }
         }
-
+                
         public int Delete(T entity)
         {
-            return 0;
+            using (var dbContext = new WebContextDB())
+            {
+                dbContext.Entry(entity).State = EntityState.Deleted;
+                return dbContext.SaveChanges();
+            }
         }
 
         public List<T> GetList()
         {
-            return new List<T>();
+            using (var dbContext = new WebContextDB())
+            {
+                return dbContext.Set<T>().ToList();
+            }
         }
 
         public int Update(T entity)
         {
-            return 0;
+            using (var dbContext = new WebContextDB())
+            {
+                dbContext.Entry(entity).State = EntityState.Modified;
+                return dbContext.SaveChanges();
+            }
         }
     }
 }

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebDeveloper.Model.DTO.PersonPhoneModelView>
+@using WebDeveloper.Helpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="~/PersonPhone/Create/@ViewBag.PersonID"> Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessEntityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumberTypeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessEntityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumberTypeDesc)
+        </td>
+        <td>
+            @Html.DisplayDateOrNullExtension(item.ModifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.BusinessEntityID + "X" + item.PhoneNumber + "X" + item.PhoneNumberTypeID })
+        </td>
+    </tr>
+}
+
+</table>

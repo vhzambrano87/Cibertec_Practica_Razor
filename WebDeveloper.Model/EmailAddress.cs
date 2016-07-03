@@ -16,6 +16,7 @@ namespace WebDeveloper.Model
 
         [Key]
         [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmailAddressID { get; set; }
 
         [Column("EmailAddress")]
@@ -26,6 +27,6 @@ namespace WebDeveloper.Model
 
         public DateTime ModifiedDate { get; set; }
 
-        public virtual Person Person { get; set; }
+        //public virtual Person Person { get; set; }
     }
 }

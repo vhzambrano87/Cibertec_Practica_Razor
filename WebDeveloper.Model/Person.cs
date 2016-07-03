@@ -54,10 +54,10 @@ namespace WebDeveloper.Model
         public string Demographics { get; set; }
 
         public Guid rowguid { get; set; }
-        
+
 
         public virtual BusinessEntity BusinessEntity { get; set; }
-        
+
         public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
 
         public virtual ICollection<EmailAddress> EmailAddress { get; set; }

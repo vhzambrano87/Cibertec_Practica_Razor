@@ -20,12 +20,15 @@ namespace WebDeveloper.DataAccess
         }
 
         private static MapperConfiguration SetAutomapperConfig()
-        {
+        {            
             lock (padlock)
             {
                 return _config ?? new MapperConfiguration(cfg =>
                 {
                     cfg.CreateMap<Person, PersonModelView>();
+                    cfg.CreateMap<EmailAddress, EmailAddressModelView>();
+                    cfg.CreateMap<Password, PasswordModelView>();
+                    cfg.CreateMap<PersonPhone, PersonPhoneModelView>();
                 });
             }
         }
@@ -41,6 +44,11 @@ namespace WebDeveloper.DataAccess
         {
             var mapper = _config.CreateMapper();
             return mapper.Map<T, R>(keyDocumentParent);
+        }
+
+        public static R GetGenericDinamyc<T, R>(T keyDocumentParent)
+        {
+            return AutoMapper.Mapper.DynamicMap<T, R>(keyDocumentParent);
         }
     }
 }

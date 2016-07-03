@@ -49,7 +49,10 @@
     <Compile Include="BusinessEntityContact.cs" />
     <Compile Include="ContactType.cs" />
     <Compile Include="CountryRegion.cs" />
+    <Compile Include="DTO\EmailAddressModelView.cs" />
+    <Compile Include="DTO\PasswordModelView.cs" />
     <Compile Include="DTO\PersonModelView.cs" />
+    <Compile Include="DTO\PersonPhoneModelView.cs" />
     <Compile Include="EmailAddress.cs" />
     <Compile Include="Password.cs" />
     <Compile Include="Person.cs" />

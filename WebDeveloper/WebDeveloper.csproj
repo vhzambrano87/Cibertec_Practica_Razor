@@ -162,16 +162,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilter\LogActionFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmailAddressController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PasswordController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\PersonPhoneController.cs" />
+    <Compile Include="Controllers\PhoneController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CustomHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -219,10 +226,22 @@
     <Content Include="scss\styles.scss" />
     <Content Include="scss\base\_site.scss" />
     <Content Include="scss\helpers\_colors.scss" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Person\Detail.cshtml" />
+    <Content Include="Views\EmailAddress\Index.cshtml" />
+    <Content Include="Views\EmailAddress\Create.cshtml" />
+    <Content Include="Views\EmailAddress\Edit.cshtml" />
+    <Content Include="Views\Password\Index.cshtml" />
+    <Content Include="Views\Password\Create.cshtml" />
+    <Content Include="Views\Password\Edit.cshtml" />
+    <Content Include="Views\PersonPhone\Index.cshtml" />
+    <Content Include="Views\PersonPhone\Create.cshtml" />
+    <Content Include="Views\PersonPhone\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Phone\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

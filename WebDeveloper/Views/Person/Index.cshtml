@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebDeveloper.Model.DTO.PersonModelView>
+@using WebDeveloper.Helpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Persons</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            MiddleName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            ModifiedDate
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.BusinessEntityID
+            </td>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.MiddleName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @Html.DisplayDateOrNullExtension(item.ModifiedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Detail", "Detail", new { id = item.BusinessEntityID })
+            </td>
+        </tr>
+    }
+</table>
